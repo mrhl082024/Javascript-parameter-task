@@ -4,19 +4,20 @@ const num2Input = document.getElementById("num2");
 const output = document.getElementById("output");
 const calculateButton = document.getElementById("calculateButton");
 
-
-calculateButton.addEventListener("click", ()=>
-    {
-        /* Vi kan nå passe verdiene av våre inputs inn i calculateNumber on runtime, 
+calculateButton.addEventListener("click", () => {
+  /* Vi kan nå passe verdiene av våre inputs inn i calculateNumber on runtime, 
         husk at calculateNumber må også returnere en tallverdi som skal settes som textContent i output.
         så her må du også bruke return nøkkelordet for å returnere en verdi ut av funksjonen din.
         */
-        output.textContent = calculateNumber(Number.parseFloat(num1Input.value), Number.parseFloat(num2Input.value), operatorSelector.value)
-    })
+  output.textContent = calculateNumber(
+    Number.parseFloat(num1Input.value),
+    Number.parseFloat(num2Input.value),
+    operatorSelector.value
+  );
+});
 
-function calculateNumber(num1, num2, operator)
-{
-    /* Lag ferdig funksjonen her, som tar inn to tall, num1 og num2 og en string som sier hva operasjon som skal gjøres
+function calculateNumber(num1, num2, operator) {
+  /* Lag ferdig funksjonen her, som tar inn to tall, num1 og num2 og en string som sier hva operasjon som skal gjøres
     de forskjellige verdiene operator kan ha, ser du i html filen, operator kan ha samme verdiene som
     hver option i select elementet,
     så den kan ha følgende verdi:
@@ -30,8 +31,27 @@ function calculateNumber(num1, num2, operator)
     Du får kun lov å jobbe inni denne funksjonen, og du får ikke lage noen nye verdier på utsiden av denne funksjonen.
     Det kan få utforutsette problemer senere.
     */
+  if (operatorSelector.textContent == "sum") {
+    num1 + num2;
+    return;
+  }
+  if (operatorSelector.textContent == "subtract") {
+    num1 - num2;
+    return;
+  }
+  if (operatorSelector.textContent == "multiply") {
+    num1 * num2;
+    return;
+  }
+  if (operatorSelector.textContent == "divide") {
+    num1 / num2;
+    return;
+  }
+  if (operatorSelector.textContent == "modulo") {
+    num1 % num2;
+    return;
+  }
 }
-
 
 /* Grunnen til at vi ofte koder på denne måten, er for å separere ut koden vår i blokker som kjører "uavhengig" av annen kode. 
 alt som skjer i calculateNumber funksjonen vår, skal kun påvirke koden inni calculateNumber.
