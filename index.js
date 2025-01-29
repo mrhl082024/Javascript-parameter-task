@@ -31,27 +31,20 @@ function calculateNumber(num1, num2, operator) {
     Du får kun lov å jobbe inni denne funksjonen, og du får ikke lage noen nye verdier på utsiden av denne funksjonen.
     Det kan få utforutsette problemer senere.
     */
-  if (operatorSelector.value == "sum") {
-    num1 + num2;
-    return;
+  if (operator == "sum") {
+    return num1 + num2;
   }
-  if (operatorSelector.value == "subtract") {
-    num1 - num2;
-    return;
+  if (operator== "subtract") {
+    return num1 - num2;
   }
-  if (operatorSelector.value == "multiply") {
-    num1 * num2;
-    return;
+  if (operator== "multiply") {
+    return num1 * num2;
   }
-  if (operatorSelector.value == "divide") {
-    num1 / num2;
-    return;
+  if (operator == "divide") {
+    return num1 / num2;
   }
-  if (operatorSelector.value == "modulo") {
-    num1 % num2;
-    return;
-  } else {
-    console.log("enter a number");
+  if (operator == "modulo") {
+    return num1 % num2;
   }
 }
 
