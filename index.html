@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Main">
+        <h1>Calculator App</h1>
+        <div class="inputContainer">
+            <select name="OperatorSelector" id="operatorSelector">
+                <option value="sum">Sum</option>
+                <option value="subtract">Subtract</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+                <option value="modulo">Modulo</option>
+            </select>
+            <input type="number" name="num1" id="num1">
+            <input type="number" name="num2" id="num2">
+        </div>
+        <div class="outputContainer">
+            <p id="output"></p>
+        </div>
+        <input type="button" id="calculateButton" value="Calculate!">
+    </div>
+</body>
+</html>
