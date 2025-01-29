@@ -11,7 +11,7 @@ calculateButton.addEventListener("click", ()=>
         husk at calculateNumber må også returnere en tallverdi som skal settes som textContent i output.
         så her må du også bruke return nøkkelordet for å returnere en verdi ut av funksjonen din.
         */
-        output.textContent = calculateNumber(num1Input.value, num2Input.value, operatorSelector.value)
+        output.textContent = calculateNumber(Number.parseFloat(num1Input.value), Number.parseFloat(num2Input.value), operatorSelector.value)
     })
 
 function calculateNumber(num1, num2, operator)
